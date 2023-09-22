@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grifindor toys", "Grifindor toys\Grifindor toys.csproj", "{BAF3447E-F8FD-4CB8-B3C0-080E5BC4B749}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAF3447E-F8FD-4CB8-B3C0-080E5BC4B749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF3447E-F8FD-4CB8-B3C0-080E5BC4B749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF3447E-F8FD-4CB8-B3C0-080E5BC4B749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF3447E-F8FD-4CB8-B3C0-080E5BC4B749}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF55B9AE-4F6B-4D33-AD8A-544D01B502F9}
+	EndGlobalSection
+EndGlobal
