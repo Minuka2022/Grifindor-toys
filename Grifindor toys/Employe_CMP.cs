@@ -36,5 +36,26 @@ namespace Grifindor_toys
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+
+            int phone = Int32.Parse(e_phone.Text);
+            DateTime joindate = DateTime.Parse(e_joindate.Text);
+            int monthlysalary = Int32.Parse(e_monthlysalary.Text);
+            int overtime = Int32.Parse(e_overtime.Text);
+            int allowances = Int32.Parse(e_allowances.Text);
+
+            emp.AddEmployee(e_fname.Text, e_lname.Text, e_gender.Text , e_address.Text , e_dob.Text , phone , joindate, monthlysalary, overtime, allowances);
+
+            MessageBox.Show("Record successfully added");
+
+            e_fname.Clear();
+            e_lname.Clear();
+            e_address.Clear();
+
+
+        }
     }
 }

@@ -29,32 +29,31 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.e_fname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.e_lname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.e_phone = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.e_monthlysalary = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.e_gender = new System.Windows.Forms.ComboBox();
+            this.e_dob = new System.Windows.Forms.DateTimePicker();
+            this.e_joindate = new System.Windows.Forms.DateTimePicker();
+            this.e_overtime = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.e_allowances = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.e_btnadd = new System.Windows.Forms.Button();
+            this.e_btnedit = new System.Windows.Forms.Button();
+            this.e_btnupdate = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +64,8 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.e_btndelete = new System.Windows.Forms.Button();
+            this.e_address = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -72,12 +73,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.dateTimePicker2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.e_address);
+            this.panel1.Controls.Add(this.e_btndelete);
+            this.panel1.Controls.Add(this.e_btnupdate);
+            this.panel1.Controls.Add(this.e_btnedit);
+            this.panel1.Controls.Add(this.e_btnadd);
+            this.panel1.Controls.Add(this.e_joindate);
+            this.panel1.Controls.Add(this.e_dob);
+            this.panel1.Controls.Add(this.e_gender);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
@@ -88,25 +91,24 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Controls.Add(this.e_allowances);
+            this.panel1.Controls.Add(this.e_overtime);
+            this.panel1.Controls.Add(this.e_monthlysalary);
+            this.panel1.Controls.Add(this.e_phone);
+            this.panel1.Controls.Add(this.e_lname);
+            this.panel1.Controls.Add(this.e_fname);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(977, 313);
+            this.panel1.Size = new System.Drawing.Size(977, 316);
             this.panel1.TabIndex = 0;
             // 
-            // textBox1
+            // e_fname
             // 
-            this.textBox1.Location = new System.Drawing.Point(46, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.e_fname.Location = new System.Drawing.Point(46, 63);
+            this.e_fname.Name = "e_fname";
+            this.e_fname.Size = new System.Drawing.Size(145, 20);
+            this.e_fname.TabIndex = 0;
+            this.e_fname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -117,13 +119,13 @@
             this.label1.Text = "Frist name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
+            // e_lname
             // 
-            this.textBox2.Location = new System.Drawing.Point(247, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 20);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.e_lname.Location = new System.Drawing.Point(247, 63);
+            this.e_lname.Name = "e_lname";
+            this.e_lname.Size = new System.Drawing.Size(145, 20);
+            this.e_lname.TabIndex = 0;
+            this.e_lname.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -145,14 +147,6 @@
             this.label3.Text = "Gender";
             this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(656, 63);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 20);
-            this.textBox4.TabIndex = 0;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -173,13 +167,13 @@
             this.label5.Text = "DOB";
             this.label5.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox6
+            // e_phone
             // 
-            this.textBox6.Location = new System.Drawing.Point(247, 151);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(145, 20);
-            this.textBox6.TabIndex = 0;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.e_phone.Location = new System.Drawing.Point(247, 151);
+            this.e_phone.Name = "e_phone";
+            this.e_phone.Size = new System.Drawing.Size(145, 20);
+            this.e_phone.TabIndex = 0;
+            this.e_phone.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label6
             // 
@@ -201,13 +195,13 @@
             this.label7.Text = "Join date";
             this.label7.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox8
+            // e_monthlysalary
             // 
-            this.textBox8.Location = new System.Drawing.Point(656, 151);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(145, 20);
-            this.textBox8.TabIndex = 0;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.e_monthlysalary.Location = new System.Drawing.Point(656, 151);
+            this.e_monthlysalary.Name = "e_monthlysalary";
+            this.e_monthlysalary.Size = new System.Drawing.Size(145, 20);
+            this.e_monthlysalary.TabIndex = 0;
+            this.e_monthlysalary.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label8
             // 
@@ -219,35 +213,38 @@
             this.label8.Text = "Monthly salary";
             this.label8.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox1
+            // e_gender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(448, 61);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
-            this.comboBox1.TabIndex = 2;
+            this.e_gender.FormattingEnabled = true;
+            this.e_gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.e_gender.Location = new System.Drawing.Point(448, 61);
+            this.e_gender.Name = "e_gender";
+            this.e_gender.Size = new System.Drawing.Size(145, 21);
+            this.e_gender.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // e_dob
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(46, 151);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(145, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.e_dob.Location = new System.Drawing.Point(46, 151);
+            this.e_dob.Name = "e_dob";
+            this.e_dob.Size = new System.Drawing.Size(145, 20);
+            this.e_dob.TabIndex = 3;
             // 
-            // dateTimePicker2
+            // e_joindate
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(448, 151);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(145, 20);
-            this.dateTimePicker2.TabIndex = 3;
+            this.e_joindate.Location = new System.Drawing.Point(448, 151);
+            this.e_joindate.Name = "e_joindate";
+            this.e_joindate.Size = new System.Drawing.Size(145, 20);
+            this.e_joindate.TabIndex = 3;
             // 
-            // textBox3
+            // e_overtime
             // 
-            this.textBox3.Location = new System.Drawing.Point(46, 256);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 20);
-            this.textBox3.TabIndex = 0;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.e_overtime.Location = new System.Drawing.Point(46, 256);
+            this.e_overtime.Name = "e_overtime";
+            this.e_overtime.Size = new System.Drawing.Size(145, 20);
+            this.e_overtime.TabIndex = 0;
+            this.e_overtime.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label9
             // 
@@ -259,13 +256,13 @@
             this.label9.Text = "Overtime rates";
             this.label9.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox5
+            // e_allowances
             // 
-            this.textBox5.Location = new System.Drawing.Point(247, 256);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(145, 20);
-            this.textBox5.TabIndex = 0;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.e_allowances.Location = new System.Drawing.Point(247, 256);
+            this.e_allowances.Name = "e_allowances";
+            this.e_allowances.Size = new System.Drawing.Size(145, 20);
+            this.e_allowances.TabIndex = 0;
+            this.e_allowances.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label10
             // 
@@ -315,34 +312,35 @@
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // e_btnadd
             // 
-            this.button2.BackColor = System.Drawing.Color.LimeGreen;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(485, 253);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "ADD";
-            this.button2.UseVisualStyleBackColor = false;
+            this.e_btnadd.BackColor = System.Drawing.Color.LimeGreen;
+            this.e_btnadd.FlatAppearance.BorderSize = 0;
+            this.e_btnadd.Location = new System.Drawing.Point(485, 253);
+            this.e_btnadd.Name = "e_btnadd";
+            this.e_btnadd.Size = new System.Drawing.Size(86, 23);
+            this.e_btnadd.TabIndex = 2;
+            this.e_btnadd.Text = "ADD";
+            this.e_btnadd.UseVisualStyleBackColor = false;
+            this.e_btnadd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // e_btnedit
             // 
-            this.button3.Location = new System.Drawing.Point(577, 253);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "EDIT";
-            this.button3.UseVisualStyleBackColor = true;
+            this.e_btnedit.Location = new System.Drawing.Point(577, 253);
+            this.e_btnedit.Name = "e_btnedit";
+            this.e_btnedit.Size = new System.Drawing.Size(86, 23);
+            this.e_btnedit.TabIndex = 2;
+            this.e_btnedit.Text = "EDIT";
+            this.e_btnedit.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // e_btnupdate
             // 
-            this.button4.Location = new System.Drawing.Point(669, 253);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "UPDATE";
-            this.button4.UseVisualStyleBackColor = true;
+            this.e_btnupdate.Location = new System.Drawing.Point(669, 253);
+            this.e_btnupdate.Name = "e_btnupdate";
+            this.e_btnupdate.Size = new System.Drawing.Size(86, 23);
+            this.e_btnupdate.TabIndex = 2;
+            this.e_btnupdate.Text = "UPDATE";
+            this.e_btnupdate.UseVisualStyleBackColor = true;
             // 
             // Column1
             // 
@@ -394,6 +392,23 @@
             this.Column10.HeaderText = "ALLOWANCES";
             this.Column10.Name = "Column10";
             // 
+            // e_btndelete
+            // 
+            this.e_btndelete.Location = new System.Drawing.Point(761, 253);
+            this.e_btndelete.Name = "e_btndelete";
+            this.e_btndelete.Size = new System.Drawing.Size(86, 23);
+            this.e_btndelete.TabIndex = 2;
+            this.e_btndelete.Text = "DELETE";
+            this.e_btndelete.UseVisualStyleBackColor = true;
+            // 
+            // e_address
+            // 
+            this.e_address.Location = new System.Drawing.Point(656, 63);
+            this.e_address.Name = "e_address";
+            this.e_address.Size = new System.Drawing.Size(299, 34);
+            this.e_address.TabIndex = 4;
+            this.e_address.Text = "";
+            // 
             // Employe_CMP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,7 +430,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox e_fname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -424,23 +439,22 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox e_monthlysalary;
+        private System.Windows.Forms.TextBox e_phone;
+        private System.Windows.Forms.TextBox e_lname;
+        private System.Windows.Forms.DateTimePicker e_joindate;
+        private System.Windows.Forms.DateTimePicker e_dob;
+        private System.Windows.Forms.ComboBox e_gender;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox e_allowances;
+        private System.Windows.Forms.TextBox e_overtime;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button e_btnupdate;
+        private System.Windows.Forms.Button e_btnedit;
+        private System.Windows.Forms.Button e_btnadd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -451,5 +465,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.Button e_btndelete;
+        private System.Windows.Forms.RichTextBox e_address;
     }
 }

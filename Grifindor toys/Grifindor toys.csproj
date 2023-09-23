@@ -52,6 +52,7 @@
     <Compile Include="BeginForm.Designer.cs">
       <DependentUpon>BeginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs" />
     <Compile Include="Employe_CMP.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -66,12 +67,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Salary.cs" />
     <Compile Include="Salar_CMPy.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Salar_CMPy.Designer.cs">
       <DependentUpon>Salar_CMPy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Setting.cs" />
     <Compile Include="Setting_CMP.cs">
       <SubType>UserControl</SubType>
     </Compile>
