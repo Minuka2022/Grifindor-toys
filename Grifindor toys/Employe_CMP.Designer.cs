@@ -49,8 +49,8 @@
             this.e_allowances = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.e_search = new System.Windows.Forms.TextBox();
+            this.e_btnsearch = new System.Windows.Forms.Button();
             this.e_btnadd = new System.Windows.Forms.Button();
             this.e_btnupdate = new System.Windows.Forms.Button();
             this.e_address = new System.Windows.Forms.RichTextBox();
@@ -298,22 +298,23 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // textBox7
+            // e_search
             // 
-            this.textBox7.Location = new System.Drawing.Point(30, 352);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(203, 20);
-            this.textBox7.TabIndex = 0;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.e_search.Location = new System.Drawing.Point(30, 352);
+            this.e_search.Name = "e_search";
+            this.e_search.Size = new System.Drawing.Size(203, 20);
+            this.e_search.TabIndex = 0;
+            this.e_search.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // e_btnsearch
             // 
-            this.button1.Location = new System.Drawing.Point(239, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
+            this.e_btnsearch.Location = new System.Drawing.Point(239, 352);
+            this.e_btnsearch.Name = "e_btnsearch";
+            this.e_btnsearch.Size = new System.Drawing.Size(86, 23);
+            this.e_btnsearch.TabIndex = 2;
+            this.e_btnsearch.Text = "Search";
+            this.e_btnsearch.UseVisualStyleBackColor = true;
+            this.e_btnsearch.Click += new System.EventHandler(this.button1_Click);
             // 
             // e_btnadd
             // 
@@ -418,10 +419,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.e_btnsearch);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.e_search);
             this.Name = "Employe_CMP";
             this.Size = new System.Drawing.Size(977, 641);
             this.panel1.ResumeLayout(false);
@@ -455,8 +456,8 @@
         private System.Windows.Forms.TextBox e_allowances;
         private System.Windows.Forms.TextBox e_overtime;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox e_search;
+        private System.Windows.Forms.Button e_btnsearch;
         private System.Windows.Forms.Button e_btnupdate;
         private System.Windows.Forms.Button e_btnadd;
         private System.Windows.Forms.RichTextBox e_address;
