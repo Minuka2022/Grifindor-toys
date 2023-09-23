@@ -52,8 +52,9 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.e_btnadd = new System.Windows.Forms.Button();
-            this.e_btnedit = new System.Windows.Forms.Button();
             this.e_btnupdate = new System.Windows.Forms.Button();
+            this.e_address = new System.Windows.Forms.RichTextBox();
+            this.EMPID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,8 +65,8 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.e_btndelete = new System.Windows.Forms.Button();
-            this.e_address = new System.Windows.Forms.RichTextBox();
+            this.EDIT = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.DELETE = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +75,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.e_address);
-            this.panel1.Controls.Add(this.e_btndelete);
             this.panel1.Controls.Add(this.e_btnupdate);
-            this.panel1.Controls.Add(this.e_btnedit);
             this.panel1.Controls.Add(this.e_btnadd);
             this.panel1.Controls.Add(this.e_joindate);
             this.panel1.Controls.Add(this.e_dob);
@@ -280,6 +279,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.EMPID,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -289,11 +289,14 @@
             this.Column7,
             this.Column8,
             this.Column9,
-            this.Column10});
-            this.dataGridView1.Location = new System.Drawing.Point(30, 390);
+            this.Column10,
+            this.EDIT,
+            this.DELETE});
+            this.dataGridView1.Location = new System.Drawing.Point(30, 397);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(864, 216);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // textBox7
             // 
@@ -324,23 +327,28 @@
             this.e_btnadd.UseVisualStyleBackColor = false;
             this.e_btnadd.Click += new System.EventHandler(this.button2_Click);
             // 
-            // e_btnedit
-            // 
-            this.e_btnedit.Location = new System.Drawing.Point(577, 253);
-            this.e_btnedit.Name = "e_btnedit";
-            this.e_btnedit.Size = new System.Drawing.Size(86, 23);
-            this.e_btnedit.TabIndex = 2;
-            this.e_btnedit.Text = "EDIT";
-            this.e_btnedit.UseVisualStyleBackColor = true;
-            // 
             // e_btnupdate
             // 
-            this.e_btnupdate.Location = new System.Drawing.Point(669, 253);
+            this.e_btnupdate.Location = new System.Drawing.Point(588, 254);
             this.e_btnupdate.Name = "e_btnupdate";
             this.e_btnupdate.Size = new System.Drawing.Size(86, 23);
             this.e_btnupdate.TabIndex = 2;
             this.e_btnupdate.Text = "UPDATE";
             this.e_btnupdate.UseVisualStyleBackColor = true;
+            this.e_btnupdate.Click += new System.EventHandler(this.e_btnupdate_Click);
+            // 
+            // e_address
+            // 
+            this.e_address.Location = new System.Drawing.Point(656, 63);
+            this.e_address.Name = "e_address";
+            this.e_address.Size = new System.Drawing.Size(299, 34);
+            this.e_address.TabIndex = 4;
+            this.e_address.Text = "";
+            // 
+            // EMPID
+            // 
+            this.EMPID.HeaderText = "EMPID";
+            this.EMPID.Name = "EMPID";
             // 
             // Column1
             // 
@@ -392,22 +400,19 @@
             this.Column10.HeaderText = "ALLOWANCES";
             this.Column10.Name = "Column10";
             // 
-            // e_btndelete
+            // EDIT
             // 
-            this.e_btndelete.Location = new System.Drawing.Point(761, 253);
-            this.e_btndelete.Name = "e_btndelete";
-            this.e_btndelete.Size = new System.Drawing.Size(86, 23);
-            this.e_btndelete.TabIndex = 2;
-            this.e_btndelete.Text = "DELETE";
-            this.e_btndelete.UseVisualStyleBackColor = true;
+            this.EDIT.HeaderText = "EDIT";
+            this.EDIT.Name = "EDIT";
+            this.EDIT.Text = "EDIT";
+            this.EDIT.UseColumnTextForButtonValue = true;
             // 
-            // e_address
+            // DELETE
             // 
-            this.e_address.Location = new System.Drawing.Point(656, 63);
-            this.e_address.Name = "e_address";
-            this.e_address.Size = new System.Drawing.Size(299, 34);
-            this.e_address.TabIndex = 4;
-            this.e_address.Text = "";
+            this.DELETE.HeaderText = "DELETE";
+            this.DELETE.Name = "DELETE";
+            this.DELETE.Text = "DELETE";
+            this.DELETE.UseColumnTextForButtonValue = true;
             // 
             // Employe_CMP
             // 
@@ -453,8 +458,9 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button e_btnupdate;
-        private System.Windows.Forms.Button e_btnedit;
         private System.Windows.Forms.Button e_btnadd;
+        private System.Windows.Forms.RichTextBox e_address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EMPID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -465,7 +471,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.Button e_btndelete;
-        private System.Windows.Forms.RichTextBox e_address;
+        private System.Windows.Forms.DataGridViewButtonColumn EDIT;
+        private System.Windows.Forms.DataGridViewButtonColumn DELETE;
     }
 }
